@@ -31,7 +31,7 @@ public class MerchantStock {
 
    @NotNull(message = "must be not empty")
    @Size(min = 11, message = "have to be more than 10 at start")
-   @Column(columnDefinition = "int not null")
+   @Column(columnDefinition = "int check (length(stock)>11) not null")
     private Integer stock;
 
 }
