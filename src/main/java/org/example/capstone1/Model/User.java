@@ -20,12 +20,12 @@ public class User {
 
     @NotEmpty(message = "must be not empty")
     @Size(min = 6,message = "have to be more than 5 length long")
-    @Column(columnDefinition ="varchar(10) not null" )
+    @Column(columnDefinition ="varchar(10) check (length(username)>6) not null" )
     private String username;
 
     @NotNull(message = "must be not empty")
     @Size(min = 7,message = "have to be more than 6 length long and contain both characters and digits")
-    @Column(columnDefinition ="varchar(10) not null" )
+    @Column(columnDefinition ="varchar(10) check (length(password)>7) not null" )
     private String password;
 
     @NotEmpty(message = "Email must not be empty")
