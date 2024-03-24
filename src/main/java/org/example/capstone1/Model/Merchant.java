@@ -21,6 +21,6 @@ public class Merchant {
 
     @NotNull(message = "must be not empty")
     @Size(min = 4,message = "have to be more than 3 length long")
-    @Column(columnDefinition ="varchar(10) not null" )
+    @Column(columnDefinition ="varchar(10) check (length(name)>4) not null" )
     private String name;
 }
