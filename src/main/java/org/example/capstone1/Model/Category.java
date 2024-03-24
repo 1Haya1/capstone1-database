@@ -21,6 +21,6 @@ public class Category {
 
     @NotNull(message = "must be not null")
     @Size(min = 4,message = "have to be more than 3 length long")
-    @Column(columnDefinition = "varchar(10) not null")
+    @Column(columnDefinition = "varchar(10) check (length(name)>3) not null")
     private String name;
 }
